@@ -1,0 +1,39 @@
+{
+    "employees": [
+        {
+            "Emp_ID": 101,
+            "Name": "Alice Johnson",
+            "Department": "HR",
+            "Salary": 50000,
+            "Email": "alice.johnson@example.com"
+        },
+        {
+            "Emp_ID": 102,
+            "Name": "Bob Smith",
+            "Department": "IT",
+            "Salary": 65000,
+            "Email": "bob.smith@example.com"
+        },
+        {
+            "Emp_ID": 103,
+            "Name": "Charlie Brown",
+            "Department": "Finance",
+            "Salary": 55000,
+            "Email": "charlie.brown@example.com"
+        },
+        {
+            "Emp_ID": 105,
+            "Name": "Eva Adams",
+            "Department": "Sales",
+            "Salary": 48000,
+            "Email": "eva.adams@example.com"
+        },
+        {
+            "Emp_ID": 106,
+            "Name": "Frank Miller",
+            "Department": "IT",
+            "Salary": 65000,
+            "Email": "frank.miller@example.com"
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+Emp_ID, Name, Department, Salary, Email
+101, Alice Johnson, HR, 50000, alice.johnson@example.com
+102, Bob Smith, IT, 60000, bob.smith@example.com
+103, Charlie Brown, Finance, 55000, charlie.brown@example.com
+104, David Wilson, Marketing, 52000, david.wilson@example.com
+105, Eva Adams, Sales, 48000, eva.adams@example.com
+106, Frank Miller, IT, 65000, frank.miller@example.com
+107, Grace Lee, HR, 53000, grace.lee@example.com
+108, Henry Clark, Finance, 58000, henry.clark@example.com
+109, Irene Scott, Marketing, 51000, irene.scott@example.com
+110, Jake White, Sales, 47000, jake.white@example.com
