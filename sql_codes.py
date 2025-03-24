@@ -1,11 +1,13 @@
 import pymysql 
-
+import os
+from dotenv import load_dotenv
+load_dotenv()
 # Open database connection 
 connection = pymysql.connect(
-    host='localhost',
-    user='root',  # Change to your actual MySQL username
-    password='Ncky@0719',  # Change to your actual password
-    db='flask'  # Change to your actual database name
+    host=os.getenv('host'),
+    user=os.getenv('user'),  # Change to your actual MySQL username
+    password=os.getenv('password'),  # Change to your actual password
+    db=os.getenv('db')  # Change to your actual database name
 )
 
 # Create a cursor object 
@@ -25,8 +27,8 @@ VALUES (%s, %s, %s, %s, %s, %s, %s, %s)
 
 # Employee data for Emp_NO 9 & 10
 employee_data = [
-    (9, "Harshit", "Hauz Khas", "9855498465", 7600, "Development", 10000, 7006),
-    (10, "Hari", "Noida", "9988776655", 7600, "Development", 11000, 7011),
+    (90, "Harshit", "Hauz Khas", "9855498465", 7600, "Development", 10000, 7006),
+    (100, "Hari", "Noida", "9988776655", 7600, "Development", 11000, 7011),
 ]
 
 # Execute the insertion query
