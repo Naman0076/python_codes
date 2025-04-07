@@ -44,3 +44,6 @@ print(table_5)
 numbers = {x: {"square": x**2, "cube": x**3} for x in range(1, 6)}
 print(numbers)
 
+# Generate a dict
+squares_dict = {x: x**2 for x in range(1, 6)}
+print(squares_dict)

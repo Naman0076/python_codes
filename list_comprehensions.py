@@ -25,10 +25,6 @@ text = "List comprehensions are awesome!"
 consonants = "".join([ch for ch in text if ch.lower() not in "aeiou"])
 print(consonants)
 
-# Generate a dict
-squares_dict = {x: x**2 for x in range(1, 6)}
-print(squares_dict)
-
 # Common element in two lists
 list1 = [1, 2, 3, 4, 5]
 list2 = [3, 4, 5, 6, 7]
