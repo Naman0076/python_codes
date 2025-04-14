@@ -31,5 +31,5 @@ class TestIsPalindrome(unittest.TestCase):
     def test_special_characters(self):
         self.assertFalse(is_palindrome("A man, a plan, a canal, Panama"))  # without cleanup
 
-if __name__ == '__main__':
+if __name__ == '__main__': 
     unittest.main()
