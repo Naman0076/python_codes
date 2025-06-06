@@ -1,24 +1,51 @@
-#examle of *args (Non-Keyword Arguments) and **kwargs (Keyword Arguments) for my understanding:
-def order_pizza(size, *args, **details):
-    print(f"order a {size} of pizza")
-    for topping in args:
-        print(f"- {topping}")
-    print(f"\nDetails of the order are: ")
-    for key, value in details.items():
-        print(f"-{key} : {value}")
-order_pizza("Large","peperoni", "onions", delivery=True, tip="50rs")
+import unittest
+import logging
 
-#Lambda Function syntax + example :
-print((lambda x,y: x + y)(5,78))
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
+def calculate(num1, op, num2):
+    logging.info(f"Calculating: {num1} {op} {num2}")
+    if op == '+':
+        result = num1 + num2
+    elif op == '-':
+        result = num1 - num2
+    elif op == '*':
+        result = num1 * num2
+    elif op == '/':
+        if num2 == 0:
+            logging.error("Division by zero error")
+            return "Error! Division by zero."
+        result = num1 / num2
+    else:
+        logging.error(f"Invalid operator: {op}")
+        return "Invalid operator!"
 
-#exapmle
-def my_map(my_func, my_iter):
-    result=[]
-    for item in my_iter:
-        new_item = my_func(item)
-        result.append(new_item)
-    return(result)
-nums = [4, 556, 245, 2, 100]
-cubed = my_map(lambda x: x**3, nums)
-print(cubed)
+    logging.info(f"Result: {result}")
+    return result
+
+class TestCalculator(unittest.TestCase):
+
+    def test_addition(self):
+        self.assertEqual(calculate(5, '+', 3), 8)
+
+    def test_subtraction(self):
+        self.assertEqual(calculate(10, '-', 4), 6)
+
+    def test_multiplication(self):
+        self.assertEqual(calculate(7, '*', 6), 42)
+
+    def test_division(self):
+        self.assertEqual(calculate(20, '/', 4), 5.0)
+
+    def test_division_by_zero(self):
+        self.assertEqual(calculate(10, '/', 0), "Error! Division by zero.")
+
+    def test_invalid_operator(self):
+        self.assertEqual(calculate(2, '%', 3), "Invalid operator!")
+
+if __name__ == '__main__':
+    unittest.main()

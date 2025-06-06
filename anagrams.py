@@ -1,4 +1,5 @@
 import unittest
+import logging
 
 def char_count(string):
     char_count = {}
@@ -10,6 +11,8 @@ def char_count(string):
     return char_count
 
 def anagrams(str1, str2):
+    logging.info("Str 1 is", str1=str1)
+    logging.info("Str 2 is", str2=str2)
     return char_count(str1) == char_count(str2)
 
 class TestAnagramFunction(unittest.TestCase):

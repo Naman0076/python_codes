@@ -1,7 +1,14 @@
 import unittest
+import logging
 
+#configure logging
+logging.basicConfig(
+    level = logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
 
 def calculate(num1, op, num2):
+    logging.info(f"Calculating {num1}, {op}, {num2}")
     if op == '+':
         return num1 + num2
     elif op == '-':
@@ -10,6 +17,7 @@ def calculate(num1, op, num2):
         return num1 * num2
     elif op == '/':
         if num2 == 0:
+            logging.error("Division by zero not possible")
             return "Error! Division by zero."
         return num1 / num2
     else:
