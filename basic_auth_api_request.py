@@ -5,6 +5,7 @@ import requests
 from requests.auth import HTTPBasicAuth
 from request_methods import make_request
 
+
 # Configure logging
 logging.basicConfig(
     level=logging.INFO,
